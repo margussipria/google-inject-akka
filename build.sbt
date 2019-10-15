@@ -5,7 +5,7 @@ licenses := Seq("Apache License, Version 2.0" -> url("http://www.apache.org/lice
 
 organization := "eu.sipria.inject.akka"
 
-version := "1.2.0-SNAPSHOT"
+version := "1.2.0"
 
 scalaVersion := "2.11.12"
 crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.1")

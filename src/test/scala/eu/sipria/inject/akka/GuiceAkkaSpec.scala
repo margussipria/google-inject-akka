@@ -19,7 +19,7 @@ object TestString {
 
 class GuiceAkkaSpec extends TestKit(ActorSystem("TestActorSystem")) with ImplicitSender with FlatSpecLike with Matchers with BeforeAndAfterAll {
 
-  override def afterAll() = TestKit.shutdownActorSystem(system)
+  override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
 
   "Guice" should "create all actors correctly" in {
     val injector = Guice.createInjector(new AkkaModule)

@@ -17,7 +17,7 @@ class Ping @Inject() (pongFactory: PongFactory)(implicit ec: ExecutionContext) e
 
   val pong = injectedChild(pongFactory.create(TestString.public), "pong")
 
-  def receive = {
+  def receive: Receive = {
     case PingMessage =>
       pipe(pong ? PingMessage) to sender()
   }

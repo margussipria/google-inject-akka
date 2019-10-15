@@ -5,22 +5,22 @@ licenses := Seq("Apache License, Version 2.0" -> url("http://www.apache.org/lice
 
 organization := "eu.sipria.inject.akka"
 
-version := "1.1.0"
+version := "1.2.0-SNAPSHOT"
 
-scalaVersion := "2.11.11"
-crossScalaVersions := Seq("2.11.11", "2.12.3")
+scalaVersion := "2.11.12"
+crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.1")
 
 scalacOptions := Seq(
   "-deprecation",
   "-language:postfixOps"
 )
 
-val AkkaVersion = "2.5.3"
-val GuiceVersion = "4.1.0"
-val ScalaTestVersion = "3.0.3"
+val AkkaVersion = "2.5.25"
+val GuiceVersion = "4.2.2"
+val ScalaTestVersion = "3.0.8"
 
 libraryDependencies ++= Seq(
-  "net.codingwell" %% "scala-guice" % "4.1.0",
+  "net.codingwell" %% "scala-guice" % "4.2.6",
   "com.google.inject" % "guice" % GuiceVersion,
   "com.google.inject.extensions" % "guice-assistedinject" % GuiceVersion,
   "com.google.inject.extensions" % "guice-multibindings" % GuiceVersion,

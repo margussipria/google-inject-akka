@@ -26,7 +26,7 @@ libraryDependencies ++= Seq(
   "com.google.inject.extensions" % "guice-multibindings" % GuiceVersion,
 
   "com.typesafe.akka" %% "akka-actor" % AkkaVersion,
-  "com.typesafe.akka" %% "akka-testKit" % AkkaVersion % Test,
+  "com.typesafe.akka" %% "akka-testkit" % AkkaVersion % Test,
 
   "org.scalatest" %% "scalatest" % ScalaTestVersion % Test
 )

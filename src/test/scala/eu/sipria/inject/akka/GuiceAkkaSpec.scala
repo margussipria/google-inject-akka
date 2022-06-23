@@ -8,7 +8,7 @@ import com.google.inject.name.Names
 import com.google.inject.{Guice, Key}
 import eu.sipria.inject.akka.pong._
 import net.codingwell.scalaguice.ScalaModule
-import org.scalatest.{BeforeAndAfterAll, FlatSpecLike, Matchers}
+import org.scalatest.{BeforeAndAfterAll, flatspec, matchers}
 
 import scala.concurrent.ExecutionContext
 
@@ -17,7 +17,7 @@ object TestString {
   val public = UUID.randomUUID().toString
 }
 
-class GuiceAkkaSpec extends TestKit(ActorSystem("TestActorSystem")) with ImplicitSender with FlatSpecLike with Matchers with BeforeAndAfterAll {
+class GuiceAkkaSpec extends TestKit(ActorSystem("TestActorSystem")) with ImplicitSender with flatspec.AnyFlatSpecLike with matchers.must.Matchers with BeforeAndAfterAll {
 
   override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
 

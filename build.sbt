@@ -5,25 +5,24 @@ licenses := Seq("Apache License, Version 2.0" -> url("http://www.apache.org/lice
 
 organization := "eu.sipria.inject.akka"
 
-version := "1.2.0"
+version := "1.2.1"
 
 scalaVersion := "2.11.12"
-crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.1")
+crossScalaVersions := Seq("2.11.12", "2.12.16", "2.13.8")
 
 scalacOptions := Seq(
   "-deprecation",
   "-language:postfixOps"
 )
 
-val AkkaVersion = "2.5.25"
-val GuiceVersion = "4.2.2"
-val ScalaTestVersion = "3.0.8"
+val AkkaVersion = "2.5.32"
+val GuiceVersion = "5.1.0"
+val ScalaTestVersion = "3.2.12"
 
 libraryDependencies ++= Seq(
-  "net.codingwell" %% "scala-guice" % "4.2.6",
+  "net.codingwell" %% "scala-guice" % "5.1.0",
   "com.google.inject" % "guice" % GuiceVersion,
   "com.google.inject.extensions" % "guice-assistedinject" % GuiceVersion,
-  "com.google.inject.extensions" % "guice-multibindings" % GuiceVersion,
 
   "com.typesafe.akka" %% "akka-actor" % AkkaVersion,
   "com.typesafe.akka" %% "akka-testkit" % AkkaVersion % Test,
@@ -33,7 +32,7 @@ libraryDependencies ++= Seq(
 
 publishMavenStyle := true
 
-publishArtifact in Test := false
+Test / publishArtifact := false
 
 pomIncludeRepository := { _ => false }
 
